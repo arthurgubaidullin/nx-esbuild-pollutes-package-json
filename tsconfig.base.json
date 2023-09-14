@@ -17,7 +17,8 @@
     "paths": {
       "@nx-esbuild-pollutes-package-json/bundled-lib": [
         "bundled-lib/src/index.ts"
-      ]
+      ],
+      "@nx-esbuild-pollutes-package-json/other-lib": ["other-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
