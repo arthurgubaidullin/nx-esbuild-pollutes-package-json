@@ -1,0 +1,28 @@
+{
+  "name": "bundled-lib",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "bundled-lib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/bundled-lib",
+        "main": "bundled-lib/src/index.ts",
+        "tsConfig": "bundled-lib/tsconfig.lib.json",
+        "assets": [],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["bundled-lib/**/*.ts", "bundled-lib/package.json"]
+      }
+    }
+  },
+  "tags": []
+}
