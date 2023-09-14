@@ -1,7 +1,9 @@
 {
   "name": "@nx-esbuild-pollutes-package-json/bundled-lib",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "@nx-esbuild-pollutes-package-json/other-lib": "*"
+  },
   "type": "commonjs",
   "main": "./index.cjs"
 }
